@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuit">
+
+    <test name="myTest1">
+        <parameter name="searchText" value="Lenovo"></parameter>
+
+        <classes>
+            <class name="Deniz._04_TabMenudekiUrunlerinKontrolu"> </class>
+        </classes>
+    </test>
+
+
+</suite>
+
