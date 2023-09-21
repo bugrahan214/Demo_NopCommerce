@@ -11,7 +11,7 @@ package Utility;
             }
 
         }
-
+//
         // Çoğu yerde aynı mesaj doğrulaması kullanıldığı için bu bölümü
         // ortak fonksiyonların yer aldığı MyFunc a taşındı.
 //    public static void successMessageValidation(){
