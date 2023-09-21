@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuit">
+
+    <test name="myTest1">
+
+        <parameter name="searchText" value="Lenovo"></parameter>
+        <parameter name="mesaj" value="Adobe Photoshop CS4"></parameter>
+
+        <groups>
+            <run>
+                <include name="Regression"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Demo_NopCommerce.DemoNopCommerce"></class>
+        </classes>
+
+    </test>
+
+    <test name="myTest2">
+        <parameter name="mesaj" value="Adobe Photoshop CS4"></parameter>
+        <groups>
+            <run>
+                <include name="Smoke"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Demo_NopCommerce.DemoNopCommerce">
+            </class>
+        </classes>
+
+    </test>
+
+    <test name="myTest3">
+
+        <groups>
+            <run>
+                <include name="OrderTest"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Demo_NopCommerce.DemoNopCommerce"></class>
+        </classes>
+
+    </test>
+
+
+</suite>
