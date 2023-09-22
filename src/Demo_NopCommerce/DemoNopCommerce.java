@@ -19,8 +19,15 @@ import java.util.List;
 
 public class DemoNopCommerce extends BaseDriver {
 
+    public String random(){
+        int random= (int) (Math.random()*100);
+        return random+".abc@gmail.com";
+    }
+
+    String randomDeger=random();
+
     @Test(dataProvider = "getData2",priority = 1,groups ={"Smoke"})
-    public void KullaniciKaydiOlusturma(String isim,String soyisim,String mail,String sifre,String sifre2,String mail2,String sifre3) {
+    public void KullaniciKaydiOlusturma(String isim,String soyisim,String mail,String sifre,String sifre2,String sifre3) {
         WebElement register = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Register")));
         register.click();
 
@@ -74,7 +81,7 @@ public class DemoNopCommerce extends BaseDriver {
         login.click();
 
         WebElement email2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Email")));
-        email2.sendKeys(mail2);
+        email2.sendKeys(mail);
 
         WebElement password2 = driver.findElement(By.id("Password"));
         password2.sendKeys(sifre3);
@@ -92,7 +99,7 @@ public class DemoNopCommerce extends BaseDriver {
         @DataProvider
         Object[][] getData2()
         {
-            Object[][] data2={{"mahmut","yıldırım","ahmet27@gmail.com","izmir35KSK","izmir35KSK","ahmet27@gmail.com","izmir35KSK"}};
+            Object[][] data2={{"mahmut","yıldırım",randomDeger,"izmir35KSK","izmir35KSK","izmir35KSK"}};
             return data2;
         }
 
@@ -100,6 +107,9 @@ public class DemoNopCommerce extends BaseDriver {
     @Test(priority = 3,groups = {"Smoke"})
     public void KullaniciGirisiYapabilme()
     {
+        WebElement logOut=driver.findElement(By.xpath("//div[@class='header-links-wrapper']//a[@href='/logout']"));
+        logOut.click();
+
         WebElement loginButton = driver.findElement(By.xpath("//a[@class='ico-login']"));
         loginButton.click();
 
@@ -113,7 +123,7 @@ public class DemoNopCommerce extends BaseDriver {
         WebElement passwordBox = driver.findElement(By.xpath("//*[@id=\"Password\"]"));
         Assert.assertTrue(passwordBox.isEnabled());
 
-        eMailBox.sendKeys("ahmet27@gmail.com"+ Keys.TAB);
+        eMailBox.sendKeys(randomDeger+ Keys.TAB);
         MyFunc.Bekle(2);
         passwordBox.sendKeys("izmir35KSK");
 
@@ -156,19 +166,17 @@ public class DemoNopCommerce extends BaseDriver {
 
 
         if (isim.equals("")) {
+            MyFunc.Bekle(2);
             WebElement message2 = driver.findElement(By.xpath("//span[@class='field-validation-error']//span"));
             Assert.assertTrue(message2.getText().contains("Please enter your"));
 
 
         }else {
-            WebElement myAccount = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("My account")));
+            MyFunc.Bekle(2);
+            WebElement myAccount = driver.findElement(By.linkText("My account"));
             Assert.assertTrue(myAccount.getText().contains("My account"));
         }
 
-        WebElement logOut=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Log out")));
-        logOut.click();
-
-        MyFunc.Bekle(2);
 
     }
 
@@ -181,13 +189,13 @@ public class DemoNopCommerce extends BaseDriver {
                {"","1234"},
                 {"e@gmail.com","1234"},
                 {"tefekahmet@gmail.com",""},
-                {"ahmet27@gmail.com","izmir35KSK"}
+                {randomDeger,"izmir35KSK"}
         };
         return data;
     }
 
 
-    @Test(enabled = false,priority = 4,groups = {"Regression"})
+    @Test(priority = 4,groups = {"Regression"})
     public void TabMenusuKontrolu() {
         String Computers = "https://demo.nopcommerce.com/computers";
         String Electronics = "https://demo.nopcommerce.com/electronics";
@@ -345,7 +353,7 @@ public class DemoNopCommerce extends BaseDriver {
     }
 
 
-    @Test(enabled = false,priority = 5,groups = {"Regression"})
+    @Test(priority = 5,groups = {"Regression"})
     @Parameters("searchText")
     public void TabMenudekiUrunlerinKontrolu(String arananUrun)
     {
@@ -588,7 +596,7 @@ public class DemoNopCommerce extends BaseDriver {
 
     }
 
-    @Test(enabled = false,priority = 8,groups = {"Smoke","Regression"})
+    @Test(priority = 8,groups = {"Smoke","Regression"})
     @Parameters("mesaj")
     public void ParametreliArama(String gelen) throws AWTException
     {

@@ -49,6 +49,7 @@ public class BaseDriver {
 //            }
     //
 
+
             @AfterClass(groups = {"Smoke","OrderTest","Regression"})
             public void bitisIslemleri() { // tearDown
                 Utility.MyFunc.Bekle(1);

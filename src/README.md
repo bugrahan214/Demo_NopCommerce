@@ -2,6 +2,7 @@
 # Proje Başlığı :
 https://openmrs.org/tr/  environment’larının bazı fonksiyonlarının test edilmesi..
 
+
  ## Açıklama :
 
 OpenMRS, açık kaynaklı bir elektronik sağlık kayıt sistemidir. Sağlık hizmeti sunan kuruluşlar için hasta verilerini yönetmek, saklamak ve paylaşmak amacıyla kullanılır. OpenMRS, özellikle düşük gelirli ülkelerde sağlık hizmetlerini geliştirmek amacıyla tasarlanmıştır. Bu platform, tıbbi kayıtları dijitalleştirme, hasta takibi, tedavi planlaması ve sağlık verilerinin analizi gibi önemli işlevleri destekler. 

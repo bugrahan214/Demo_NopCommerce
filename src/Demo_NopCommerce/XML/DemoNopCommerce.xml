@@ -3,7 +3,7 @@
 
 <suite name="mySuit">
 
-    <test name="myTest1">
+    <test name="Regression">
 
         <parameter name="searchText" value="Lenovo"></parameter>
         <parameter name="mesaj" value="Adobe Photoshop CS4"></parameter>
@@ -20,13 +20,14 @@
 
     </test>
 
-    <test name="myTest2">
+    <test name="Smoke">
         <parameter name="mesaj" value="Adobe Photoshop CS4"></parameter>
         <groups>
             <run>
                 <include name="Smoke"></include>
             </run>
         </groups>
+
 
         <classes>
             <class name="Demo_NopCommerce.DemoNopCommerce">
@@ -37,7 +38,7 @@
 
 
 
-    <test name="myTest3">
+    <test name="OrderTest">
 
         <groups>
             <run>
