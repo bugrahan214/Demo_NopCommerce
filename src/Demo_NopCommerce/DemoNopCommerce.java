@@ -24,7 +24,7 @@ public class DemoNopCommerce extends BaseDriver {
         return random+".abc@gmail.com";
     }
 
-    String randomDeger=random();
+    String randomDeger;
 
     @Test(dataProvider = "getData2",priority = 1,groups ={"Smoke"})
     public void KullaniciKaydiOlusturma(String isim,String soyisim,String mail,String sifre,String sifre2,String sifre3) {
@@ -95,11 +95,13 @@ public class DemoNopCommerce extends BaseDriver {
         WebElement logOut=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Log out")));
         logOut.click();
 
+        randomDeger=mail;
+
     }
         @DataProvider
         Object[][] getData2()
         {
-            Object[][] data2={{"mahmut","yıldırım",randomDeger,"izmir35KSK","izmir35KSK","izmir35KSK"}};
+            Object[][] data2={{"mahmut","yıldırım",random(),"izmir35KSK","izmir35KSK","izmir35KSK"}};
             return data2;
         }
 

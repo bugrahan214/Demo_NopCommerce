@@ -1,31 +1,32 @@
-# TechnoStudyTr Project
+# demo.NopCommerce Project
 # Proje Başlığı :
-https://openmrs.org/tr/  environment’larının bazı fonksiyonlarının test edilmesi..
+https://demo.nopcommerce.com/  environment’larının bazı fonksiyonlarının test edilmesi..
 
 
  ## Açıklama :
 
-OpenMRS, açık kaynaklı bir elektronik sağlık kayıt sistemidir. Sağlık hizmeti sunan kuruluşlar için hasta verilerini yönetmek, saklamak ve paylaşmak amacıyla kullanılır. OpenMRS, özellikle düşük gelirli ülkelerde sağlık hizmetlerini geliştirmek amacıyla tasarlanmıştır. Bu platform, tıbbi kayıtları dijitalleştirme, hasta takibi, tedavi planlaması ve sağlık verilerinin analizi gibi önemli işlevleri destekler. 
-OpenMRS Projesi açık kaynaklıdır ve bir topluluk tarafından geliştirilen bir projedir. Projede yazılım geliştiricileri, sağlık uzmanları ve gönüllüler bir araya gelir ve sağlık hizmetlerinin veri yönetimini iyileştirmek için çalışırlar. OpenMRS, kullanıcı dostu bir arabirim sunar ve farklı sağlık hizmeti sunan kuruluşlar için uyarlanabilir.
-
+NopCommerce, açık kaynaklı bir e-ticaret platformudur ve ASP.NET teknolojileri kullanılarak
+geliştirilmiştir. İşletmeler için çevrimiçi mağazalar oluşturmak amacıyla kullanılır. Ücretsiz
+olarak kullanılabilir ve herkes tarafından özelleştirilebilir. Ürün yönetimi, ödeme işlemleri,
+envanter takibi, SEO gibi birçok e-ticaret özelliğini içerir. Büyük bir topluluğa sahiptir
+(community) ve soruları yanıtlar. Hem kişisel hem de ticari amaçlarla kullanılabilir. Güvenlik
+önlemleri ile korunur ve düzenli güncellemeler sunar.
 
 Proje Detayları:
 
-* OpenMrs Environment Testi:
-* OpenMrs web sitesinin demo alanı test edilecektir.
-* Toplam 10 user story proje backlog'unda bulunmaktadır.
+* NopCommerce Environment Testi:
+* NopCommerce web sitesinin demo alanı test edilecektir.
+* Toplam 8 user story proje backlog'unda bulunmaktadır.
 * Aşağıdaki hikayelerin tamamının bir sprintte bitirilmesi hedeflenmiştir.
 
-1. Sisteme Giriş (Login) Hatalarını Kontrol Etmek. 
-2. Kullanıcı, uygulamaya giriş yapabilmeli. 
-3. Kullanıcı, sistemden güvenli bir şekilde çıkış yapabilmeli. 
-4. Kullanıcı, hasta bilgilerini girerek sisteme hasta kaydı yapabilmeli. 
-5. Kullanıcı, hesap ayarlarına (My Account) ulaşabilecek bir arayüze sahip olmalı. 
-6. Doktor, hastaları listeleyebilmeli ve belirli bir hastayı search yapabilmeli. 
-7. Doktor, belirli bir hastayı sistemden silebilmeli. 
-8. Doktor, tüm hastaları listeleyebilmeli. 
-9. Hasta Kayıtlarını Birleştirme (Merge). 
-10. Hasta Randevusu Alırken Yanlış Saat Dilimi.
+1.  US_01_Reg - Kullanıcı Kaydı (Register) Oluşturma
+2.  US_02_Login - Kullanıcı Girişi Yapabilme (Login)
+3.  US_03_Login - Negatif ve Pozitif Login Kombinasyonları
+4.  US_04_TabMenu01 - Tab Menü Kontrolü
+5.  US_04_TabMenu02 - Tab Menü'deki ürünlerin kontrolü
+6.  US_05_Gift01 - Hediye Siparişi Verme İşlemi
+7.  US_06_Order01 - Bilgisayar Siparişi Verme İşlemi
+8.  US-07_Search01 - Parametreli Arama İşlemi
 
 
 ## Başlarken :
